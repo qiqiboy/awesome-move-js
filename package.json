@@ -1,0 +1,37 @@
+{
+  "name": "awesome-move-js",
+  "version": "1.0.0",
+  "description": "由于move-js使用太糟糕，动画连贯处理糟心，所以重新造轮子",
+  "main": "lib/move-js.js",
+  "scripts": {
+    "start": "npm run watch & npm run example",
+    "build": "BABEL_ENV=production webpack --output-library=Movejs --output-library-target=umd --module-bind js=babel-loader src/move-js.js lib/move-js.js",
+    "watch": "BABEL_ENV=development webpack --output-library=Movejs --output-library-target=umd --watch --cache --hot --module-bind js=babel-loader src/move-js.js docs/move-js.js",
+    "example": "./node_modules/.bin/serve -s ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://qiqiboy@github.com/qiqiboy/awesome-move-js.git"
+  },
+  "author": "qiqiboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiqiboy/awesome-move-js/issues"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "homepage": "https://github.com/qiqiboy/awesome-move-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react-app": "^3.1.1",
+    "node-sass": "^4.7.2",
+    "serve": "^6.4.9",
+    "webpack": "^3.10.0"
+  }
+}
